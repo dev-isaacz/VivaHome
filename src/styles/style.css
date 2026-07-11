@@ -16,6 +16,7 @@ html {
 
 body {
     padding-top: 90px; /* ajuste conforme a altura do header */
+    overflow-x: hidden; /* evita rolagem horizontal em qualquer resolução */
 }
 
 header {
@@ -62,6 +63,18 @@ nav {
 
 .menu-header li a:hover {
     color: #123847;
+}
+
+/* Botão hambúrguer: escondido por padrão (desktop/notebook) */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #0E333D;
+    font-size: 1.8em;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px 8px;
 }
 
 .main{
@@ -292,4 +305,400 @@ nav {
 
 .listaquatro-footer li{
     padding-bottom: 10px;
+}
+
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   A partir daqui, apenas ajustes de layout por breakpoint.
+   Nenhuma cor, fonte, imagem, texto, gradiente, ícone ou animação foi
+   alterada — somente tamanhos, larguras, direções de flex/grid e espaçamentos
+   para adaptação de tela.
+   Breakpoints:
+     Desktop  -> a partir de 1200px  (estilo acima, sem alterações)
+     Notebook -> 992px a 1199px
+     Tablet   -> 768px a 991px
+     Mobile   -> até 767px
+   ========================================================================== */
+
+/* Imagens sempre fluidas em qualquer resolução, evitando distorção/overflow */
+img {
+    max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   NOTEBOOK (992px – 1199px)
+   Reduz um pouco paddings, fontes e larguras fixas para caber sem quebrar
+   o layout em duas colunas.
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+
+    header {
+        padding: 18px 30px;
+    }
+
+    .main{
+        padding: 50px 50px;
+    }
+
+    .titulo-main{
+        font-size: 44px;
+    }
+
+    .texto-main{
+        font-size: 18px;
+    }
+
+    .img-main{
+        height: 550px;
+    }
+
+    .section{
+        padding: 60px 50px;
+    }
+
+    .img-section{
+        width: 50%;
+        height: 400px;
+    }
+
+    .conteudo-section{
+        width: 44%;
+    }
+
+    .titulo-section{
+        font-size: 44px;
+    }
+
+    .texto-section{
+        font-size: 18px;
+    }
+
+    .article{
+        padding: 60px 50px;
+    }
+
+    .titulo-article{
+        font-size: 44px;
+    }
+
+    .img-article{
+        height: 550px;
+    }
+
+    .texto-article{
+        font-size: 19px;
+    }
+
+    .div-aviso{
+        margin: 60px auto;
+        padding: 55px 40px;
+    }
+
+    .footer{
+        padding: 0 20px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   TABLET (768px – 991px)
+   Empilha as seções (imagem abaixo/acima do texto), ativa o menu hambúrguer
+   e reduz proporcionalmente fontes e espaçamentos, mantendo o mesmo estilo.
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+
+    header{
+        padding: 16px 24px;
+    }
+
+    /* Ativa o menu hambúrguer */
+    .hamburger-btn{
+        display: block;
+    }
+
+    .menu-header{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+
+        background-color: white;
+        box-shadow: 0 8px 10px rgba(0,0,0,.08);
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .35s ease;
+    }
+
+    .menu-header.menu-aberto{
+        max-height: 320px;
+    }
+
+    .menu-header li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-header li a{
+        display: block;
+        padding: 16px 0;
+    }
+
+    /* Hero (main) empilhado: texto em cima, imagem embaixo */
+    .main{
+        flex-direction: column;
+        padding: 50px 30px;
+        text-align: center;
+    }
+
+    .conteudo{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .img-main{
+        width: 100%;
+        height: 420px;
+    }
+
+    .titulo-main{
+        font-size: 38px;
+    }
+
+    .texto-main{
+        font-size: 17px;
+    }
+
+    .botton-pesquisar{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Seção "Reivindique sua melhor vida" empilhada */
+    .section{
+        flex-direction: column;
+        padding: 50px 30px;
+        text-align: center;
+    }
+
+    .img-section{
+        width: 100%;
+        height: 380px;
+        margin-bottom: 40px;
+    }
+
+    .conteudo-section{
+        width: 100%;
+    }
+
+    .titulo-section{
+        font-size: 38px;
+    }
+
+    .texto-section{
+        font-size: 17px;
+    }
+
+    .botton-lermais{
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    /* Sobre nós: grid de 2 colunas vira 1 coluna */
+    .article{
+        grid-template-columns: 1fr;
+        padding: 50px 30px;
+        text-align: center;
+    }
+
+    .titulo-article{
+        grid-column: 1 / 2;
+        font-size: 38px;
+    }
+
+    .img-article{
+        height: 380px;
+        margin-bottom: 30px;
+    }
+
+    .texto-article{
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .div-aviso{
+        margin: 50px 20px;
+        padding: 45px 25px;
+    }
+
+    .titulo-div{
+        font-size: 32px;
+    }
+
+    .texto-div{
+        font-size: 18px;
+    }
+
+    /* Footer: colunas quebram em duas linhas */
+    .footer{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px 40px;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .logo-footer{
+        width: 100%;
+        font-size: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto-footer{
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE (até 767px)
+   Layout 100% empilhado, textos e botões ocupando a largura disponível,
+   mantendo cores, fontes e estilo idênticos ao desktop.
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+
+    body{
+        padding-top: 80px;
+    }
+
+    header{
+        padding: 14px 20px;
+    }
+
+    .logo{
+        font-size: 1.6em;
+    }
+
+    .hamburger-btn{
+        font-size: 1.6em;
+    }
+
+    .menu-header.menu-aberto{
+        max-height: 280px;
+    }
+
+    .main{
+        padding: 40px 20px;
+    }
+
+    .titulo-main{
+        font-size: 30px;
+    }
+
+    .texto-main{
+        font-size: 16px;
+    }
+
+    .img-main{
+        height: 260px;
+        border-radius: 20px;
+    }
+
+    .botton-pesquisar{
+        width: 100%;
+        padding: 14px 0;
+    }
+
+    .section{
+        padding: 40px 20px;
+    }
+
+    .img-section{
+        height: 240px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+
+    .titulo-section{
+        font-size: 30px;
+    }
+
+    .texto-section{
+        font-size: 16px;
+    }
+
+    .botton-lermais{
+        width: 100%;
+        padding: 14px 0;
+    }
+
+    .article{
+        padding: 40px 20px;
+    }
+
+    .titulo-article{
+        font-size: 30px;
+    }
+
+    .img-article{
+        height: 240px;
+        border-radius: 20px;
+        margin-bottom: 25px;
+    }
+
+    .texto-article{
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .div-aviso{
+        margin: 40px 15px;
+        padding: 35px 18px;
+        border-radius: 20px;
+    }
+
+    .titulo-div{
+        font-size: 26px;
+    }
+
+    .texto-div{
+        font-size: 16px;
+    }
+
+    .texto-div br{
+        display: none;
+    }
+
+    .botton-inscrevase{
+        width: 100%;
+        padding: 14px 0;
+    }
+
+    .footer{
+        padding: 35px 20px;
+        gap: 25px 30px;
+    }
+
+    .logo-footer{
+        font-size: 28px;
+    }
+
+    .texto-footer{
+        font-size: 13px;
+    }
+
+    .listaum-footer,
+    .listadois-footer,
+    .listatres-footer,
+    .listaquatro-footer{
+        font-size: 13px;
+    }
 }
