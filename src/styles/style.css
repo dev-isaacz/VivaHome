@@ -1,0 +1,136 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    padding: 20px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #0E333D;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.menu-header {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.menu-header li {
+    color: #0E333D;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 60px 80px;
+}
+
+.conteudo{
+    width: 45%;
+}
+
+.img-main{
+    width: 48%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.titulo-main{
+    font-size: 55px;
+    color: #123847;
+    margin-bottom: 20px;
+}
+
+.texto-main{
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.botton-pesquisar{
+    display: inline-block;
+    width: 320px;
+    padding: 16px 0;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right, #123847 40%, #c7ced2);
+    border-radius: 40px;
+}
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 80px;
+}
+
+.img-section{
+    width: 650px;
+    height: 500px;
+
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.conteudo-section{
+    width: 40%;
+}
+
+.titulo-section{
+    font-size: 55px;
+    color: #123847;
+    margin-bottom: 20px;
+}
+
+.texto-section{
+    font-size: 20px;
+    color: #4b4b4b;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.botton-lermais{
+    display: inline-block;
+
+    width: 180px;
+    padding: 16px 0;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+
+    background: linear-gradient(to left, #123847 40%, #c7ced2);
+    border-radius: 40px;
+
+    transition: .3s;
+}
+
+.botton-lermais:hover{
+    background-color: #0c2833;
+}
