@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="shortcut icon" href="src/images/favicon.ico" type="image/x-icon">
     <title>VivaHome</title>
 </head>
 <body>
@@ -18,12 +19,12 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#">Catálogo</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="main">
+    <main id="home" class="main">
         <div class="conteudo">
             <h1 class="titulo-main">O apartamento que você procura em um único lugar.</h1>
             <p class="texto-main">Há mais de 15 anos transformando sonhos em realidade!
@@ -43,20 +44,14 @@
         </div>
     </section>
 
-    <article class="article">
+    <article id="sobre" class="article">
         <h1 class="titulo-article">Sobre Nós</h1>
         <img class="img-article" src="./src/images/img3.jpeg" alt="Imagem sede apartamento">
-        <p class="texto-article">A VivaHome é uma empresa especializada na compra,<br> 
-            valorização, revenda e locação por temporada de<br>
-            apartamentos à beira-mar. Nosso objetivo é oferecer imóveis<br>
-            que unem conforto, sofisticação e excelente localização,<br> 
-            proporcionando experiências inesquecíveis para nossos clientes.<br>
-            Fundada em 2026, a empresa nasceu com a missão de tornar<br> 
-            o acesso a apartamentos de alto padrão mais simples, seguro<br>
-            e confiável. Mesmo sendo uma empresa jovem, buscamos<br>
-            crescer com transparência, qualidade e compromisso,<br>
-            oferecendo sempre as melhores opções para quem deseja<br>
-            investir ou aproveitar dias especiais no litoral.</p>
+        <p class="texto-article">
+            A VivaHome é uma empresa especializada na compra, valorização, revenda e locação por temporada de apartamentos à beira-mar. Nosso objetivo é oferecer imóveis que unem conforto, sofisticação e excelente localização, proporcionando experiências inesquecíveis para nossos clientes.
+
+            Fundada em 2026, a empresa nasceu com a missão de tornar o acesso a apartamentos de alto padrão mais simples, seguro e confiável. Mesmo sendo uma empresa jovem, buscamos crescer com transparência, qualidade e compromisso, oferecendo sempre as melhores opções para quem deseja investir ou aproveitar dias especiais no litoral.
+        </p>
     </article>
 
     <div class="div-aviso">
@@ -66,31 +61,33 @@
             <a class="botton-inscrevase" href="index.html">INSCREVA-SE</a>
     </div>
 
-    <footer class="footer">
+    <footer id="contato" class="footer">
+        <div class="logo-footer">
         <i class="fa-solid fa-house"></i>
         <span class="titulo-footer">VivaHome</span>
         <p class="texto-footer">Nossa visão é fazer de todas <br>
         as pessoas o melhor lugar para viver.</p>
+        </div>
         <ul class="listaum-footer">
-            <li>Sobre Nós</li>
+            <li><strong>Sobre Nós</strong></li>
             <li>Quem Somos</li>
             <li>Caracteristicas</li>
             <li>Noticias & Blog</li>
         </ul>
         <ul class="listadois-footer">
-            <li>Empresa</li>
+            <li><strong>Empresa</strong></li>
             <li>Como Trabalhamos ?</li>
             <li>Capital</li>
             <li>Segurança</li>
         </ul>
          <ul class="listatres-footer">
-            <li>Apoio</li>
+            <li><strong>Apoio</strong></li>
             <li>FAQs</li>
             <li>Ajuda</li>
             <li>Contate-nos</li>
         </ul>
-          <ul class="listauquatro-footer">
-            <li>Juridico</li>
+          <ul class="listaquatro-footer">
+            <li><strong>Juridico</strong></li>
             <li>Politica </li>
             <li>Documentos</li>
             <li>Ajuda</li>
@@ -100,4 +97,4 @@
 <script src="./src/scripts/script.js"></script>
 </body>
 
-</htm
+</html>

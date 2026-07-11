@@ -1,9 +1,17 @@
 @charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -150,4 +158,138 @@ nav {
 
 .botton-lermais:hover{
     background-color: #0c2833;
+}
+
+.article{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 80px;
+}
+
+.titulo-article{
+    grid-column: 1 / 3;
+    font-size: 55px;
+    color: #123847;
+    margin-bottom: 20px;
+}
+
+.img-article{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.texto-article{
+    font-size: 22px;
+    line-height: 2;
+    color: #4b4b4b;
+}
+
+/* ---------- Bloco de destaque "Comece agora com VivaHome" ---------- */
+
+.div-aviso{
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 70px 60px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(to right, #123847, #18596B);
+
+    text-align: center;
+}
+
+.titulo-div{
+    color: white;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.texto-div{
+    color: rgba(255,255,255,.9);
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.botton-inscrevase{
+    display: inline-block;
+
+    width: 260px;
+    padding: 16px 0;
+
+    background: white;
+    color: #123847;
+
+    border-radius: 40px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.botton-inscrevase:hover{
+    transform: translateY(-3px);
+    background:#f2f2f2;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #18596B;
+    width: 100%;
+    height: 328px;
+}
+
+.logo-footer{
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.texto-footer{
+    align-items: flex-start;
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.listaum-footer{
+    color: #ffffff;
+    font-size: 14px;   
+}
+
+.listaum-footer li{
+    padding-bottom: 10px;
+}
+
+.listadois-footer{
+    color: #ffffff;
+    font-size: 14px;   
+}
+
+.listadois-footer li{
+    padding-bottom: 10px;
+}
+
+.listatres-footer{
+    color: #ffffff;
+    font-size: 14px;   
+}
+
+.listatres-footer li{
+    padding-bottom: 10px;
+}
+
+.listaquatro-footer{
+    color: #ffffff;
+    font-size: 14px;   
+}
+
+.listaquatro-footer li{
+    padding-bottom: 10px;
 }
